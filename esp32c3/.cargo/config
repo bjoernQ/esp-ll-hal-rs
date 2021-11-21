@@ -1,0 +1,11 @@
+[target.riscv32imc-unknown-none-elf]
+runner = "riscv64-unknown-elf-gdb -q -x gdb_init"
+rustflags = [
+  "-C", "link-arg=-Tesp32c3-link.x",
+  "-C", "link-arg=-Tperipherals.ld",
+  "-C", "link-arg=-Trom.api.ld",
+  "-C", "link-arg=-Trom.ld"
+]
+
+[build]
+target = "riscv32imc-unknown-none-elf"

@@ -1,0 +1,10 @@
+{
+    "rust-analyzer.cargo.allTargets": false,
+    "rust-analyzer.checkOnSave.allTargets": true,
+    "rust-analyzer.checkOnSave.overrideCommand": [
+        "cargo",
+        "check",
+        "--message-format", 
+        "json"
+    ]
+}

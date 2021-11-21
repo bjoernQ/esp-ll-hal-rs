@@ -1,0 +1,10 @@
+[build]
+target = "xtensa-esp32-none-elf"
+
+rustflags = [
+  "-C", "link-arg=-nostartfiles",
+  "-C", "link-arg=-Wl,-Tlink.x",
+  "-C", "link-arg=-Tperipherals.ld",
+  "-C", "link-arg=-Trom.api.ld",
+  "-C", "link-arg=-Trom.ld"
+]
